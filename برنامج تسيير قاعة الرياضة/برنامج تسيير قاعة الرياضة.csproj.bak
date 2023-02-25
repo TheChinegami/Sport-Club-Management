@@ -1,0 +1,532 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9A9BF240-60FE-4EB3-BCEA-8AA6EAB50FB0}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>برنامج_تسيير_قاعة_الرياضة</RootNamespace>
+    <AssemblyName>برنامج تسيير قاعة الرياضة</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BCrypt.Net-Next, Version=4.0.3.0, Culture=neutral, PublicKeyToken=1e11be04b6288443, processorArchitecture=MSIL">
+      <HintPath>..\packages\BCrypt.Net-Next.4.0.3\lib\net472\BCrypt.Net-Next.dll</HintPath>
+    </Reference>
+    <Reference Include="DevExpress.BonusSkins.v22.1" />
+    <Reference Include="DevExpress.Charts.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.CodeParser.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.Desktop.v22.1" />
+    <Reference Include="DevExpress.Drawing.v22.1" />
+    <Reference Include="DevExpress.Data.v22.1" />
+    <Reference Include="DevExpress.DataAccess.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Dialogs.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.ExpressApp.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Pdf.v22.1.Drawing, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Persistent.Base.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.PivotGrid.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Printing.v22.1.Core" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.RichEdit.v22.1.Export, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Utils.v22.1" />
+    <Reference Include="DevExpress.Utils.v22.1.UI, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Xpo.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraBars.v22.1" />
+    <Reference Include="DevExpress.Sparkline.v22.1.Core" />
+    <Reference Include="DevExpress.XtraCharts.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraDialogs.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.1" />
+    <Reference Include="DevExpress.XtraGauges.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraGrid.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraPrinting.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraReports.v22.1.Extensions, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraScheduler.v22.1.Core, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraScheduler.v22.1.Core.Desktop, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraTreeList.v22.1, Version=22.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.1.2.10\lib\2.0\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=1.4.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.RecyclableMemoryStream.1.4.1\lib\net46\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="Microsoft.Web.WebView2.Core, Version=1.0.864.35, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.864.35\lib\net45\Microsoft.Web.WebView2.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.WinForms, Version=1.0.864.35, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.864.35\lib\net45\Microsoft.Web.WebView2.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebView2.Wpf, Version=1.0.864.35, Culture=neutral, PublicKeyToken=2a8ab48044d2601e, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Web.WebView2.1.0.864.35\lib\net45\Microsoft.Web.WebView2.Wpf.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.IO.Hashing, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.IO.Hashing.6.0.1\lib\net461\System.IO.Hashing.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.4\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.4.1, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.5.3\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Runtime.Serialization.Formatters.Soap" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Threading.Tasks" />
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="UIAutomationProvider" />
+    <Reference Include="WindowsBase" />
+    <Reference Include="WindowsFormsIntegration" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DAL\DAL.cs" />
+    <Compile Include="PL\HOME\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\HOME\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\LOGIN\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\LOGIN\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\MESSAGES\confirmation.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\MESSAGES\confirmation.Designer.cs">
+      <DependentUpon>confirmation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\add_edit_trainee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\add_edit_trainee.Designer.cs">
+      <DependentUpon>add_edit_trainee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\apprenti_abs_record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\apprenti_abs_record.Designer.cs">
+      <DependentUpon>apprenti_abs_record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\details_trainee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\details_trainee.Designer.cs">
+      <DependentUpon>details_trainee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\edit_out_of_training.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\edit_out_of_training.Designer.cs">
+      <DependentUpon>edit_out_of_training.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\out_of_training.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\out_of_training.Designer.cs">
+      <DependentUpon>out_of_training.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\page1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\page1.Designer.cs">
+      <DependentUpon>page1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE1\register.Designer.cs">
+      <DependentUpon>register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE2\absence.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE2\absence.Designer.cs">
+      <DependentUpon>absence.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE2\absence_record.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE2\absence_record.Designer.cs">
+      <DependentUpon>absence_record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE2\page2.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE2\page2.Designer.cs">
+      <DependentUpon>page2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE3\add_edit_payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE3\add_edit_payment.Designer.cs">
+      <DependentUpon>add_edit_payment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE3\page3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE3\page3.Designer.cs">
+      <DependentUpon>page3.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE3\register_payement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE3\register_payement.Designer.cs">
+      <DependentUpon>register_payement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE4\add_exam.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE4\add_exam.Designer.cs">
+      <DependentUpon>add_exam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE4\add_subscriber.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE4\add_subscriber.Designer.cs">
+      <DependentUpon>add_subscriber.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE4\page4.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE4\page4.Designer.cs">
+      <DependentUpon>page4.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE5\add_edit_details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE5\add_edit_details.Designer.cs">
+      <DependentUpon>add_edit_details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE5\page5.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE5\page5.Designer.cs">
+      <DependentUpon>page5.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE6\change password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE6\change password.Designer.cs">
+      <DependentUpon>change password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE6\page6 _password.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE6\page6 _password.Designer.cs">
+      <DependentUpon>page6 _password.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE6\page6.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE6\page6.Designer.cs">
+      <DependentUpon>page6.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE7\add_edit user.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE7\add_edit user.Designer.cs">
+      <DependentUpon>add_edit user.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE7\page7.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE7\page7.Designer.cs">
+      <DependentUpon>page7.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE7\user details.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE7\user details.Designer.cs">
+      <DependentUpon>user details.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE8\page8.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PL\PAGES\PAGE8\page8.Designer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="reports\absence record.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\absence record.Designer.cs">
+      <DependentUpon>absence record.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\apprenti info.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\apprenti info.Designer.cs">
+      <DependentUpon>apprenti info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\datagv_to_datat.cs" />
+    <Compile Include="reports\liste des apprentis act.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\liste des apprentis act.Designer.cs">
+      <DependentUpon>liste des apprentis act.cs</DependentUpon>
+    </Compile>
+    <Compile Include="reports\liste des apprentis pass.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="reports\liste des apprentis pass.Designer.cs">
+      <DependentUpon>liste des apprentis pass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="user.cs" />
+    <EmbeddedResource Include="PL\HOME\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\LOGIN\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\MESSAGES\confirmation.resx">
+      <DependentUpon>confirmation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE1\add_edit_trainee.resx">
+      <DependentUpon>add_edit_trainee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE1\apprenti_abs_record.resx">
+      <DependentUpon>apprenti_abs_record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE1\details_trainee.resx">
+      <DependentUpon>details_trainee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE1\edit_out_of_training.resx">
+      <DependentUpon>edit_out_of_training.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE1\out_of_training.resx">
+      <DependentUpon>out_of_training.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE1\page1.resx">
+      <DependentUpon>page1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE1\register.resx">
+      <DependentUpon>register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE2\absence.resx">
+      <DependentUpon>absence.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE2\absence_record.resx">
+      <DependentUpon>absence_record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE2\page2.resx">
+      <DependentUpon>page2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE3\add_edit_payment.resx">
+      <DependentUpon>add_edit_payment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE3\page3.resx">
+      <DependentUpon>page3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE3\register_payement.resx">
+      <DependentUpon>register_payement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE4\add_exam.resx">
+      <DependentUpon>add_exam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE4\add_subscriber.resx">
+      <DependentUpon>add_subscriber.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE4\page4.resx">
+      <DependentUpon>page4.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE5\add_edit_details.resx">
+      <DependentUpon>add_edit_details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE5\page5.resx">
+      <DependentUpon>page5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE6\change password.resx">
+      <DependentUpon>change password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE6\page6 _password.resx">
+      <DependentUpon>page6 _password.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE6\page6.resx">
+      <DependentUpon>page6.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE7\add_edit user.resx">
+      <DependentUpon>add_edit user.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE7\page7.resx">
+      <DependentUpon>page7.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE7\user details.resx">
+      <DependentUpon>user details.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PL\PAGES\PAGE8\page8.resx" />
+    <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="reports\absence record.resx">
+      <DependentUpon>absence record.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\apprenti info.resx">
+      <DependentUpon>apprenti info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\liste des apprentis act.resx">
+      <DependentUpon>liste des apprentis act.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="reports\liste des apprentis pass.resx">
+      <DependentUpon>liste des apprentis pass.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\detail.png" />
+    <None Include="MEDIA\ICONS\logout %281%29.png" />
+    <None Include="MEDIA\ICONS\logout1.png" />
+    <None Include="MEDIA\ICONS\logout.png" />
+    <None Include="MEDIA\IMAGES\24296765_132131077456422_445038575331989379_n.png" />
+    <None Include="MEDIA\ICONS\hide.png" />
+    <None Include="MEDIA\ICONS\show.png" />
+    <None Include="MEDIA\ICONS\question.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 et x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DATABASE\salle de sport.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DATABASE\salle de sport_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>salle de sport.mdf</DependentUpon>
+    </Content>
+    <None Include="Resources\yy.png" />
+    <None Include="MEDIA\IMAGES\pre.png" />
+    <None Include="MEDIA\ICONS\delete-friend.png" />
+    <None Include="MEDIA\ICONS\Picture1.png" />
+    <None Include="MEDIA\IMAGES\Picture1.jpg" />
+    <None Include="MEDIA\ICONS\enter.png" />
+    <None Include="MEDIA\IMAGES\73-734492_taekwondo-arts-wallpaper-desktop-martial-world-sport-silhouette.png" />
+    <None Include="MEDIA\ICONS\file.png" />
+    <None Include="MEDIA\ICONS\team.png" />
+    <None Include="MEDIA\ICONS\manager.png" />
+    <None Include="MEDIA\ICONS\price-list.png" />
+    <None Include="MEDIA\ICONS\taekwondo.png" />
+    <None Include="MEDIA\ICONS\money.png" />
+    <None Include="MEDIA\ICONS\calendar.png" />
+    <None Include="MEDIA\ICONS\taekwondo%281%29.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="..\packages\Microsoft.Web.WebView2.1.0.864.35\build\Microsoft.Web.WebView2.targets" Condition="Exists('..\packages\Microsoft.Web.WebView2.1.0.864.35\build\Microsoft.Web.WebView2.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Ce projet fait référence à des packages NuGet qui sont manquants sur cet ordinateur. Utilisez l'option de restauration des packages NuGet pour les télécharger. Pour plus d'informations, consultez http://go.microsoft.com/fwlink/?LinkID=322105. Le fichier manquant est : {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Web.WebView2.1.0.864.35\build\Microsoft.Web.WebView2.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Web.WebView2.1.0.864.35\build\Microsoft.Web.WebView2.targets'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
